@@ -20,6 +20,9 @@ def jogar():
         letras_acertadas = colocar_letras_acertadas(letra_selecionada, letras_acertadas, palavra_secreta)
       else:
         tentativas -= 1
+    enforcado = perdeu(tentativas, palavra_secreta)
+    vencedor = ganhou(letras_acertadas)
+  print("Fim do jogo")
 
 def imprime_mensagem_abertura():
   print("*********************************")
@@ -86,6 +89,33 @@ def ganhou(letras_acertadas):
     print("           ) (          ")
     print("         _.' '._        ")
     print("        '-------'       ")
+    return True
+  else:
+    return False
+
+def perdeu(tentativas, palavra_secreta):
+  limpar_tela()
+  desenha_forca(tentativas)
+  if tentativas == 0:
+    limpar_tela()
+    print("Você perdeu")
+    print("A palavra era {}".format(palavra_secreta))
+    print("    _______________         ")
+    print("   /               \       ")
+    print("  /                 \      ")
+    print("//                   \/\  ")
+    print("\|   XXXX     XXXX   | /   ")
+    print(" |   XXXX     XXXX   |/     ")
+    print(" |   XXX       XXX   |      ")
+    print(" |                   |      ")
+    print(" \__      XXX      __/     ")
+    print("   |\     XXX     /|       ")
+    print("   | |           | |        ")
+    print("   | I I I I I I I |        ")
+    print("   |  I I I I I I  |        ")
+    print("   \_             _/       ")
+    print("     \_         _/         ")
+    print("       \_______/           ")
     return True
   else:
     return False
