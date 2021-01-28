@@ -3,6 +3,8 @@ def jogar():
   palavras_e_dicas = le_arquivo()
   numero_sorteado = sortear_numero(palavras_e_dicas)
   palavra_secreta = carrega_palavra_secreta(palavras_e_dicas, numero_sorteado)
+  dica = carrega_dica(palavras_e_dicas, numero_sorteado)
+
 
 def imprime_mensagem_abertura():
   print("*********************************")
@@ -31,6 +33,17 @@ def carrega_palavra_secreta(palavras_e_dicas, numero_sorteado):
       palavra = elemento
     indice += 1
   return palavra.upper()
+
+def carrega_dica(palavras_e_dicas, numero_sorteado):
+  palavra_e_dica = palavras_e_dicas[numero_sorteado]
+  palavra_e_dica = palavra_e_dica.split(",") 
+  indice = 0
+  for elemento in palavra_e_dica:
+    if indice == 1:
+      elemento = elemento.strip()
+      dica = elemento
+    indice += 1
+  return dica.upper()
   
 if __name__ == "__main__":
   jogar()
