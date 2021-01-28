@@ -1,0 +1,16 @@
+anel,acessorio
+teclado,informatica
+mouse,informatica
+corda,objeto
+pote,cozinha
+zeus,deuses
+ventilador,objeto
+chinelo,calçado
+pulseira,acessorio
+ventilador,aparelho_domestico
+jabuti,animal
+jambo,fruta
+carteiro,profissão
+barco,veiculo
+caixote,objeto
+xadrez,jogo
