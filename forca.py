@@ -12,14 +12,14 @@ def jogar():
   tentativas = 8
   desenha_forca(tentativas)
   while enforcado == False and vencedor == False:
-      print("A dica é:", dica)
-      print(letras_acertadas)
-      letra_selecionada = escolher_letra()
-      if letra_selecionada in palavra_secreta:
-        print("Você acertou")
-        letras_acertadas = colocar_letras_acertadas(letra_selecionada, letras_acertadas, palavra_secreta)
-      else:
-        tentativas -= 1
+    print("A dica é:", dica)
+    print(letras_acertadas)
+    letra_selecionada = escolher_letra()
+    if letra_selecionada in palavra_secreta:
+      print("Você acertou")
+      letras_acertadas = colocar_letras_acertadas(letra_selecionada, letras_acertadas, palavra_secreta)
+    else:
+      tentativas -= 1
     enforcado = perdeu(tentativas, palavra_secreta)
     vencedor = ganhou(letras_acertadas)
   print("Fim do jogo")
